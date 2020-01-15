@@ -1,5 +1,4 @@
 var row = 0;
-var color = document.g
 var colors = [
     'red', 'blue', 'green', 'yellow', 'orange', 'black'
 ]
@@ -18,9 +17,11 @@ var text = document.getElementsByTagName("p")[0];
 var checkBtn = document.getElementById("check");
 console.log(colorArray);
 
+text.innerHTML = "Uitleg: Klik op de grote ronde buttons om de kleuren te veranderen. Voordat je naar de volgende button gaat moet je op de grote button 'next button' klikken. Als je bij de laatste bent klik je onderaan op 'check'";
 
 
 function check(){
+    text.innerHTML = "";
     for(column = 0; column < 4; column++){
         btn = document.getElementById("button"+row+"-"+column);
         btnValue = btn.value;
@@ -43,8 +44,6 @@ function check(){
         }
 
     }
-    
-
         var checkColors = 0;
 
         for (column = 0 ; column < 4; column++){
@@ -79,6 +78,7 @@ var column = 0;
 function next(){
     console.log(document.getElementById("button"+row+"-"+column).value);
     column++;
+    document.getElementById("button"+row+"-"+column).style.background = "rgb(119, 119, 119)";
 }
 
 function red(){
