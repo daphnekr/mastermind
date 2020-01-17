@@ -34,8 +34,11 @@ function check(){
             checks.style.border = "2px solid #000000";
             checks.style.borderRadius = "40px"
         }
+    }
 
-        else if (colorArray.includes(btnValue)){
+    for(column = 0; column < 4; column++){
+
+        if (colorArray.includes(btnValue)){
                 checks.style.height = "30px";
                 checks.style.width = "30px";
                 checks.style.background = "white";
